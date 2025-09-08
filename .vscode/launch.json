@@ -1,0 +1,27 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Watch Files",
+      "type": "node-terminal",
+      "request": "launch",
+      "command": "pnpm --filter maccarone-vsc core:watch"
+    },
+    {
+      "name": "Debug Extension",
+      "type": "extensionHost",
+      "request": "launch",
+      "args": [
+        "--extensionDevelopmentPath=${workspaceFolder}/packages/maccarone-vsc"
+      ],
+      "outFiles": ["${workspaceFolder}/packages/maccarone-vsc/dist/*.cjs"]
+    }
+  ],
+  "compounds": [
+    {
+      "name": "Debug & Watch Files",
+      "configurations": ["Watch Files", "Debug Extension"],
+      "stopAll": true
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+node_modules/
+result
+storybook-static/
+.eslintcache
+*.tar
+*.tar.gz
+*.tgz
+*.vsix
+*.zip
+.vscode/ltex.dictionary*

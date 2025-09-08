@@ -1,0 +1,35 @@
+{
+  "name": "maccarone-vsc",
+  "private": true,
+  "version": "0.1.0",
+  "description": "a vscode theme plugin",
+  "type": "module",
+  "engines": {
+    "vscode": "^1.102.0",
+    "node": ">=20.0.0"
+  },
+  "keywords": [],
+  "author": "Peter",
+  "license": "ISC",
+  "packageManager": "pnpm@10.13.1",
+  "categories": [
+    "Themes"
+  ],
+  "main": "./dist/main.cjs",
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "scripts": {
+    "core:dev": "tsx build.ts --dev --no-regenerate",
+    "core:watch": "tsx watch build.ts --dev --no-regenerate"
+  },
+  "devDependencies": {
+    "@actions/core": "catalog:",
+    "@vscode/vsce": "catalog:",
+    "@types/vscode": "catalog:",
+    "tsup": "catalog:",
+    "tsx": "catalog:",
+    "type-flag": "catalog:",
+    "typescript": "catalog:"
+  }
+}

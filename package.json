@@ -1,0 +1,34 @@
+{
+  "name": "@maccarone/vscode-monorepo",
+  "version": "0.1.0",
+  "private": "true",
+  "keywords": [
+    "vscode",
+    "extension"
+  ],
+  "author": "Peter",
+  "license": "ISC",
+  "packageManager": "pnpm@10.13.1",
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "description": "a theme vscode plugin",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "@types/node": "catalog:",
+    "@tsconfig/node22": "catalog:",
+    "@eslint/js": "catalog:",
+    "globals": "catalog:",
+    "typescript": "catalog:",
+    "tsx": "catalog:",
+    "tsup": "catalog:",
+    "husky": "catalog:",
+    "prettier": "catalog:",
+    "eslint": "catalog:",
+    "typescript-eslint": "catalog:",
+    "eslint-plugin-unicorn": "catalog:",
+    "eslint-plugin-prettier": "catalog:"
+  }
+}
