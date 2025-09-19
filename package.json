@@ -1,7 +1,7 @@
 {
   "name": "@maccarone/vscode-monorepo",
   "version": "0.1.0",
-  "private": "true",
+  "private": true,
   "keywords": [
     "vscode",
     "extension"
@@ -14,7 +14,7 @@
   },
   "description": "a theme vscode plugin",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "postinstall": "husky && pnpm --filter @maccarone/vscode compiled:pack"
   },
   "devDependencies": {
     "@types/node": "catalog:",
@@ -29,6 +29,7 @@
     "eslint": "catalog:",
     "typescript-eslint": "catalog:",
     "eslint-plugin-unicorn": "catalog:",
-    "eslint-plugin-prettier": "catalog:"
+    "eslint-plugin-prettier": "catalog:",
+    "tavolozza": "catalog:"
   }
 }

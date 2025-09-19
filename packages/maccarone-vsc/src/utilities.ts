@@ -1,4 +1,5 @@
 import { commands, Uri, window, workspace } from "vscode";
+import { version } from 'tavolozza'
 
 export enum UpdateTrigger {
   CONFIG_CHANGE = "Configuration changed",
