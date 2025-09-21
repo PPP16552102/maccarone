@@ -1,25 +1,69 @@
 {
   "name": "maccarone-vsc",
-  "private": true,
   "version": "0.1.0",
+  "private": true,
   "description": "a vscode theme plugin",
+  "displayName": "Maccarone For VSCode",
+  "publisher": "scott-peter",
   "type": "module",
+  "main": "dist/main.cjs",
+  "browser": "dist/browser.cjs",
+  "icon": "icon.png",
+  "author": "Peter",
+  "license": "MIT",
+  "packageManager": "pnpm@10.13.1",
+  "keywords": [
+    "Themes",
+    "vscode"
+  ],
   "engines": {
     "vscode": "^1.102.0",
     "node": ">=20.0.0"
   },
-  "keywords": [],
-  "author": "Peter",
-  "license": "ISC",
-  "packageManager": "pnpm@10.13.1",
   "categories": [
     "Themes"
   ],
-  "main": "./dist/main.cjs",
   "activationEvents": [
     "onStartupFinished"
   ],
+  "capabilities": {
+    "untrustedWorkspaces": {
+      "supported": true
+    },
+    "virtualWorkspaces": true
+  },
+  "contributes": {
+    "themes": [
+      {
+        "label": "Maccarone lampone",
+        "uiTheme": "vs",
+        "path": "./themes/lampone.json"
+      }
+    ]
+  },
+  "configuration": {
+    "title": "Maccarone",
+    "properties": {
+      "maccarone.boldKeywords": {
+        "scope": "application",
+        "type": "boolean",
+        "default": true,
+        "markdownDescription": "Controls whether to use **bold** for keywords."
+      }
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/PPP16552102/maccarone.git",
+    "directory": "packages/maccarone-vsc"
+  },
+  "bugs": {
+    "url": "https://github.com/PPP16552102/maccarone/issues"
+  },
+  "homepage": "https://github.com/PPP16552102/maccarone/tree/main/packages/maccarone-vsc#readme",
   "scripts": {
+    "schema:ui": "tsx src/hooks/updateSchemas.ts",
+    "core:build": "tsx build.ts",
     "core:dev": "tsx build.ts --dev --no-regenerate",
     "core:watch": "tsx watch build.ts --dev --no-regenerate"
   },

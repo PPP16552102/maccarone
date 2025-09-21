@@ -1,5 +1,5 @@
 import { commands, Uri, window, workspace } from "vscode";
-import { version } from 'tavolozza'
+import { version } from "tavolozza";
 
 export enum UpdateTrigger {
   CONFIG_CHANGE = "Configuration changed",
@@ -53,5 +53,3 @@ export const getConfiguration = (): any => {
   console.log("config ->", config);
   const options = {};
 };
-
-export const 
