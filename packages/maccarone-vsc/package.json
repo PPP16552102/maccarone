@@ -39,7 +39,18 @@
         "uiTheme": "vs",
         "path": "./themes/lampone.json"
       }
-    ]
+    ],
+    "configuration": {
+      "title": "Maccarone",
+      "properties": {
+        "maccarone.boldKeywords": {
+          "scope": "application",
+          "type": "boolean",
+          "default": true,
+          "markdownDescription": "Controls whether to use **bold** for keywords."
+        }
+      }
+    }
   },
   "configuration": {
     "title": "Maccarone",

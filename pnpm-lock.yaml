@@ -135,6 +135,8 @@ importers:
         specifier: 'catalog:'
         version: 5.9.2
 
+  packages/maccarone-vsc-pack: {}
+
   packages/maccarone-vsc-typegen:
     devDependencies:
       json-schema-to-typescript:
