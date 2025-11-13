@@ -3,17 +3,45 @@
   "version": "0.1.0",
   "description": "theme for VSCode, NPM Version",
   "type": "module",
+  "main": "dist/index.cjs",
+  "module": "dist/index.js",
+  "author": "Peter",
+  "license": "MIT",
+  "packageManager": "pnpm@10.13.1",
+  "keywords": [
+    "vscode"
+  ],
   "publishConfig": {
     "access": "public",
     "provenance": true,
     "registry": "https://registry.npmjs.org"
   },
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "repository": {
+    "url": "https://github.com/PPP16552102/maccarone",
+    "directory": "packages/catppuccin-vscode"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "packageManager": "pnpm@10.13.1"
+  "homepage": "https://github.com/PPP16552102/maccarone/tree/main/packages/maccarone-vscode#readme",
+  "bugs": {
+    "url": "https://github.com/PPP16552102/maccarone/issues"
+  },
+  "files": [
+    "dist/*",
+    "themes/*"
+  ],
+  "engines": {
+    "node": ">=22.0.0"
+  },
+  "scripts": {
+    "build": "pnpm tsup",
+    "compiled:pack": "pnpm pack"
+  },
+  "dependencies": {
+    "tavolozza": "catalog:"
+  },
+  "devDependencies": {
+    "tsup": "catalog:",
+    "typescript": "catalog:",
+    "@types/node": "catalog:",
+    "@tsconfig/node22": "catalog:"
+  }
 }

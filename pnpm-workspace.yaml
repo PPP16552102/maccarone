@@ -8,6 +8,7 @@ catalog:
   "@types/node": ^22.18.0
   "@types/vscode": ~1.102.0
   "@vscode/vsce": ^3.6.0
+  "json-schema-to-typescript": ^15.0.4
   eslint: ^9.34.0
   eslint-plugin-prettier: ^5.5.4
   eslint-plugin-unicorn: ^60.0.0

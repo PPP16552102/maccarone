@@ -1,3 +1,5 @@
+import generateThemes from "@/hooks/generateThemes";
+
 import { getFlag } from "type-flag";
 import { build } from "tsup";
 import { createVSIX } from "@vscode/vsce";
@@ -7,6 +9,8 @@ import { readPackageJsonVersion, updatePackageJson } from "@/hooks/packageJson";
 // 解析命令行参数
 const isDevelopment = getFlag("--dev", Boolean);
 const shouldRegenerate = !getFlag("--no-regenerate", Boolean);
+
+await generateThemes();
 
 // 读取版本号
 const packageJsonVersion = await readPackageJsonVersion();
