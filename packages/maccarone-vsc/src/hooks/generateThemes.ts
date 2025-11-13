@@ -4,7 +4,11 @@ import { flavorEntries } from "tavolozza";
 import { repoRoot } from "./constants";
 import { compileTheme, defaultOptions } from "@/theme";
 
-const flavorNames = flavorEntries.map(([flavorName]) => flavorName);
+const flavorNames = (flavorEntries as [string, string]).map(
+  ([flavorName]) => flavorName,
+);
+
+console.log("flavors name -> ", flavorNames);
 
 const optEnvironmentVariable = process.env.MACCARONE_OPTIONS;
 
@@ -15,7 +19,7 @@ const optEnvironment = optEnvironmentVariable
 const main = async () => {
   await mkdir(join(repoRoot, "themes"), { recursive: true });
 
-  flavorNames.map((name) => {
+  flavorNames.map((name: any) => {
     const options = { ...defaultOptions, ...optEnvironment };
     const theme = compileTheme(name, options);
 

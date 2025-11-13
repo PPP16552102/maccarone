@@ -12,6 +12,8 @@ import {
 export const activate = async (context: ExtensionContext) => {
   const base = context.extensionUri;
 
+  console.log("base -> ", base);
+
   window.showInformationMessage("hello");
 
   // 主题文件路径
@@ -19,7 +21,11 @@ export const activate = async (context: ExtensionContext) => {
     lampone: Uri.joinPath(base, "themes", "lampone.json"),
   };
 
+  console.log("paths -> ", paths);
+
   const config = getConfiguration();
+
+  console.log("config -> ", config);
 
   if ((await isFreshInstall(context)) && !isDefaultConfig()) {
     updateThemes(config, paths, UpdateTrigger.FRESH_INSTALL);

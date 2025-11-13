@@ -55,3 +55,41 @@ export type ThemeContext = {
   paletteAnsi: MaccaronePaletteAnsi;
   options: ThemeOptions;
 };
+
+// export type VscodeThemeColors = {
+//   // Contrast colors
+//   contrastActiveBorder: string;
+//   contrastBorder: string;
+
+//   // Base colors
+//   focusBorder: string;
+//   foreground: string;
+//   "widget.border": string;
+//   "widget.shadow": string;
+//   "selection.background": string;
+//   descriptionForeground: string;
+//   errorForeground: string;
+//   "icon.foreground": string;
+//   "sash.hoverBorder": string;
+
+//   // Window border
+//   "window.activeBorder": string;
+//   "window.inactiveBorder": string;
+
+//   // Text colors
+//   "textBlockQuote.background": string;
+//   "textBlockQuote.border": string;
+//   "textCodeBlock.background": string;
+//   "textLink.activeForeground": string;
+//   "textLink.foreground": string;
+//   "textPreformat.foreground": string;
+//   "textPreformat.background": string;
+//   "textSeparator.foreground": string;
+
+//   // Action colors
+//   "toolbar.hoverBackground": string;
+//   "toolbar.hoverOutline": string;
+//   "toolbar.activeBackground": string;
+//   "editorActionList.background": string;
+//   "editorActionList.foreground": string;
+// };

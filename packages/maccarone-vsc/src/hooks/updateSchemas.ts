@@ -1,4 +1,5 @@
-import { Accents, repoRoot, VSCodeSchemasRoot } from "./constants";
+import { Accents, VSCodeSchemasRoot } from "@/constants/common";
+import { repoRoot } from "./constants";
 import { writeFile } from "fs/promises";
 import { join } from "path";
 

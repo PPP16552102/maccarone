@@ -14,7 +14,8 @@
   },
   "description": "a theme vscode plugin",
   "scripts": {
-    "postinstall": "husky"
+    "postinstall": "husky",
+    "vsc:schema:ui": "pnpm --filter maccarone-vsc schema:ui"
   },
   "devDependencies": {
     "@types/node": "catalog:",
