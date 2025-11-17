@@ -53,6 +53,23 @@ export const getUIColors = (
     "button.border": "#cb90ffff",
     "button.separator": "#d39",
     "button.hoverBackground": "#d39",
+    "button.secondaryForeground": "#d99",
+    "button.secondaryBackground": "#d99",
+    "button.secondaryHoverBackground": "#222",
+    "checkbox.background": "#ffffff",
+    "checkbox.foreground": "#ffffff",
+    "checkbox.disabled.background": "#7e7e7e",
+    "checkbox.disabled.foreground": "#7e7e7e",
+    "checkbox.border": mainForeGround,
+    "checkbox.selectBackground": mainForeGround,
+    "checkbox.selectBorder": mainForeGround,
+    "radio.activeForeground": mainForeGround,
+    "radio.activeBackground": "#d39",
+    "radio.activeBorder": "#d39",
+    "radio.inactiveForeground": "#cb90ffff",
+    "radio.inactiveBackground": mainHoverBackground,
+    "radio.inactiveBorder": "#d39",
+    "radio.inactiveHoverBackground": mainHoverBackground,
 
     // Lists and trees
     "list.activeSelectionBackground": mainHoverBackground,
@@ -65,6 +82,6 @@ export const getUIColors = (
     "tab.unfocusedActiveBackground": "#333333",
 
     // Edittor Colors
-    "editor.background": "#c0c0c0ff",
+    "editor.background": "#3b3b3bff",
   };
 };
