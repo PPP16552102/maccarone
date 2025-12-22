@@ -1,5 +1,7 @@
 import { ThemeContext } from "@/types";
 
+import extensions from "./extensions";
+
 export const getUIColors = (
   context: ThemeContext,
 ): Partial<Record<any, string>> => {
@@ -72,49 +74,49 @@ export const getUIColors = (
     "radio.inactiveHoverBackground": mainHoverBackground,
 
     // dropdown
-    'dropdown.background': '#51576d',
-    'dropdown.listBackground': '#51576d',
-    'dropdown.border': '#cb90ffff',
-    'dropdown.foreground': '#ffffff',
+    "dropdown.background": "#51576d",
+    "dropdown.listBackground": "#51576d",
+    "dropdown.border": "#cb90ffff",
+    "dropdown.foreground": "#ffffff",
 
     // input
-    'input.background': '#414559',
-    'input.border': '#cb90ffff',
-    'input.foreground': '#ffffff',
-    'input.placeholderForeground': '#7d849f',
-    'inputOption.activeBackground': '#cb90ffff',
-    'inputOption.activeBorder': '#cb90ffff',
-    'inputOption.activeForeground': '#d39',
-    'inputOption.hoverBackground': '#fff',
-    'inputValidation.errorBackground': '#e78284',
-    'inputValidation.errorForeground': '#ffffff',
-    'inputValidation.errorBorder': '#cb90ffff',
-    'inputValidation.infoBackground': '#fff',
-    'inputValidation.infoForeground': '#333',
-    'inputValidation.infoBorder': '#fff',
-    'inputValidation.warningBackground': 'yellow',
-    'inputValidation.warningForeground': 'yellow',
-    'inputValidation.warningBorder': 'yellow',
+    "input.background": "#414559",
+    "input.border": "#cb90ffff",
+    "input.foreground": "#ffffff",
+    "input.placeholderForeground": "#7d849f",
+    "inputOption.activeBackground": "#cb90ffff",
+    "inputOption.activeBorder": "#cb90ffff",
+    "inputOption.activeForeground": "#d39",
+    "inputOption.hoverBackground": "#fff",
+    "inputValidation.errorBackground": "#e78284",
+    "inputValidation.errorForeground": "#ffffff",
+    "inputValidation.errorBorder": "#cb90ffff",
+    "inputValidation.infoBackground": "#fff",
+    "inputValidation.infoForeground": "#333",
+    "inputValidation.infoBorder": "#fff",
+    "inputValidation.warningBackground": "yellow",
+    "inputValidation.warningForeground": "yellow",
+    "inputValidation.warningBorder": "yellow",
 
     //scrollbar control
-    'scrollbar.background': '#292c3c',
-    'scrollbar.shadow': '#cb90ffff',
-    'scrollbarSlider.activeBackground': '#cb90ffff',
-    'scrollbarSlider.background': '#fff',
-    'scrollbarSlider.hoverBackground': '#a475ceff',
+    "scrollbar.background": "#292c3c",
+    "scrollbar.shadow": "#cb90ffff",
+    "scrollbarSlider.activeBackground": "#cb90ffff",
+    "scrollbarSlider.background": "#fff",
+    "scrollbarSlider.hoverBackground": "#a475ceff",
 
     // badge
-    'badge.foreground': '#fff',
-    'badge.background': 'red',
+    "badge.foreground": "#fff",
+    "badge.background": "red",
 
-    'progressBar.background': '#cb90ffff',
+    "progressBar.background": "#cb90ffff",
 
     // Lists and trees
-    "list.activeSelectionBackground": '#414559',
-    'list.activeSelectionForeground': '#ffffff',
-    'list.activeSelectionIconForeground': '#ffffff',
-    'list.dropBackground': '#fff',
-    "list.hoverBackground": "#35394b",
+    "list.activeSelectionBackground": "#414559",
+    "list.activeSelectionForeground": "#ffffff",
+    "list.activeSelectionIconForeground": "#ffffff",
+    "list.dropBackground": "#fff",
+    "list.hoverBackground": "#353 94b",
 
     // Side Bar
     "sideBar.background": "#292c3c",
@@ -124,5 +126,7 @@ export const getUIColors = (
 
     // Edittor Colors
     "editor.background": "#303446",
+
+    ...extensions(context),
   };
 };

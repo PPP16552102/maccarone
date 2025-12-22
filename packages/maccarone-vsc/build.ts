@@ -36,11 +36,11 @@ await build({
 // 定义 VSIX 包的文件名（包含版本号）
 const packagePath = `maccarone-vsc-${packageJsonVersion}.vsix`;
 
-// // 创建 VSIX 包（VS Code 扩展安装包）
-// await createVSIX({
-//   dependencies: false,
-//   packagePath,
-// });
+// 创建 VSIX 包（VS Code 扩展安装包）
+await createVSIX({
+  dependencies: false,
+  packagePath,
+});
 
-// // 如果在 GitHub Actions 环境中运行，设置输出变量
-// if (process.env.GITHUB_ACTIONS) setOutput("vsixPath", packagePath);
+// 如果在 GitHub Actions 环境中运行，设置输出变量
+if (process.env.GITHUB_ACTIONS) setOutput("vsixPath", packagePath);

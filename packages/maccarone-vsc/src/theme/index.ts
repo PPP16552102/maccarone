@@ -6,6 +6,7 @@ import {
 } from "@/types";
 import { flavors } from "tavolozza";
 import { getUIColors } from "./uiColors";
+import { getTokenColors } from "./tokenColors";
 
 export const defaultOptions: any = {
   accent: "mauve",
@@ -59,7 +60,6 @@ export const compileTheme = (
     name: `Maccarone ${flavorData.name}`,
     type: "light",
     colors: getUIColors(context),
+    tokenColors: getTokenColors(context),
   };
-
-  console.log("palett", palette);
 };
