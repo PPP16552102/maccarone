@@ -1,89 +1,84 @@
 import { ThemeContext } from "@/types";
 
 import extensions from "./extensions";
+import { Theme } from "@/constants/staticColor";
+import { mix, opacity, Transparent } from "@/utils/color";
 
 export const getUIColors = (
   context: ThemeContext,
 ): Partial<Record<any, string>> => {
+  const { primary, white, black, info, danger, success } = Theme;
   const { palette, paletteAnsi, options } = context;
-
-  const mainBackground = "";
-  const mainForeGround = "#ff7ef4ff";
-  const disabled = "#ff588aff";
-  const mainHoverBackground = "#e0bcffff";
-  const mainBorder = "#cb90ffff";
-
-  const accent = palette[options.accent];
 
   return {
     // Base Colors
-    focusBorder: "#139928",
-    foreground: mainForeGround,
-    disabledForeground: disabled,
-    "widget.border": "#e0bcffff",
-    "widget.shadow": "#e0bcffff",
-    "selection.background": "#FFAA88",
-    descriptionForeground: "#D39",
-    errorForeground: "#D39111",
-    "icon.foreground": "#999",
-    "sash.hoverBorder": "#399",
-    "window.activeBorder": "#7e7e7e",
-    "window.inactiveBorder": "#333",
+    focusBorder: primary,
+    foreground: primary,
+    disabledForeground: info,
+    "widget.border": primary,
+    "widget.shadow": primary,
+    "selection.background": primary,
+    descriptionForeground: primary,
+    errorForeground: primary,
+    "icon.foreground": primary,
+    "sash.hoverBorder": opacity(primary, 0.8),
+    "window.activeBorder": info,
+    "window.inactiveBorder": black,
 
     // Text colors
-    "textBlockQuote.background": "#eeeeee",
-    "textBlockQuote.border": "#D39",
-    "textCodeBlock.background": "#eeeeee",
+    "textBlockQuote.background": white,
+    "textBlockQuote.border": white,
+    "textCodeBlock.background": black,
     "textLink.activeForeground": "#D39FFF",
-    "textLink.foreground": "#506affff",
+    "textLink.foreground": primary,
     "textPreformat.background": "#ffb7bdff",
-    "textPreformat.foreground": "#d39",
-    "textSeparator.foreground": "#d39",
+    "textPreformat.foreground": white,
+    "textSeparator.foreground": white,
 
     // Action colors
-    "toolbar.hoverBackground": mainHoverBackground,
+    "toolbar.hoverBackground": black,
     "toolbar.hoverOutline": "#e47575ce",
-    "toolbar.activeBackground": mainHoverBackground,
+    "toolbar.activeBackground": "",
     "editorActionList.background": "#d39",
     "editorActionList.foreground": "#d39",
     "editorActionList.focusForeground": "#d39",
     "editorActionList.focusBackground": "#d39",
 
     // Button control
-    "button.background": "#cb90ffff",
-    "button.foreground": "#ffffff",
-    "button.border": "#cb90ffff",
-    "button.separator": "#d39",
-    "button.hoverBackground": "#d39",
-    "button.secondaryForeground": "#d99",
-    "button.secondaryBackground": "#d99",
-    "button.secondaryHoverBackground": "#222",
-    "checkbox.background": "#ffffff",
-    "checkbox.foreground": "#ffffff",
-    "checkbox.disabled.background": "#7e7e7e",
-    "checkbox.disabled.foreground": "#7e7e7e",
-    "checkbox.border": mainForeGround,
-    "checkbox.selectBackground": mainForeGround,
-    "checkbox.selectBorder": mainForeGround,
-    "radio.activeForeground": mainForeGround,
+    "button.background": primary,
+    "button.foreground": white,
+    "button.border": Transparent,
+    "button.separator": white,
+    "button.hoverBackground": opacity(primary, 0.8),
+    "button.secondaryForeground": primary,
+    "button.secondaryBackground": mix(primary, white, 0.5),
+    "button.secondaryHoverBackground": opacity(primary, 0.6),
+    "checkbox.background": white,
+    "checkbox.foreground": primary,
+    "checkbox.disabled.background": info,
+    "checkbox.disabled.foreground": danger,
+    "checkbox.border": primary,
+    "checkbox.selectBackground": primary,
+    "checkbox.selectBorder": Transparent,
+    "radio.activeForeground": "",
     "radio.activeBackground": "#d39",
     "radio.activeBorder": "#d39",
     "radio.inactiveForeground": "#cb90ffff",
-    "radio.inactiveBackground": mainHoverBackground,
+    "radio.inactiveBackground": "",
     "radio.inactiveBorder": "#d39",
-    "radio.inactiveHoverBackground": mainHoverBackground,
+    "radio.inactiveHoverBackground": "",
 
     // dropdown
-    "dropdown.background": "#51576d",
-    "dropdown.listBackground": "#51576d",
-    "dropdown.border": "#cb90ffff",
-    "dropdown.foreground": "#ffffff",
+    "dropdown.background": white,
+    "dropdown.listBackground": white,
+    "dropdown.border": primary,
+    "dropdown.foreground": primary,
 
     // input
-    "input.background": "#414559",
-    "input.border": "#cb90ffff",
-    "input.foreground": "#ffffff",
-    "input.placeholderForeground": "#7d849f",
+    "input.background": white,
+    "input.border": primary,
+    "input.foreground": black,
+    "input.placeholderForeground": primary,
     "inputOption.activeBackground": "#cb90ffff",
     "inputOption.activeBorder": "#cb90ffff",
     "inputOption.activeForeground": "#d39",
@@ -99,33 +94,33 @@ export const getUIColors = (
     "inputValidation.warningBorder": "yellow",
 
     //scrollbar control
-    "scrollbar.background": "#292c3c",
-    "scrollbar.shadow": "#cb90ffff",
-    "scrollbarSlider.activeBackground": "#cb90ffff",
-    "scrollbarSlider.background": "#fff",
-    "scrollbarSlider.hoverBackground": "#a475ceff",
+    "scrollbar.background": white,
+    "scrollbar.shadow": opacity(primary, 0.5),
+    "scrollbarSlider.activeBackground": primary,
+    "scrollbarSlider.background": white,
+    "scrollbarSlider.hoverBackground": opacity(primary, 0.8),
 
     // badge
-    "badge.foreground": "#fff",
-    "badge.background": "red",
+    "badge.foreground": white,
+    "badge.background": primary,
 
-    "progressBar.background": "#cb90ffff",
+    "progressBar.background": primary,
 
     // Lists and trees
-    "list.activeSelectionBackground": "#414559",
-    "list.activeSelectionForeground": "#ffffff",
-    "list.activeSelectionIconForeground": "#ffffff",
-    "list.dropBackground": "#fff",
-    "list.hoverBackground": "#353 94b",
+    "list.activeSelectionBackground": opacity(primary, 0.5),
+    "list.activeSelectionForeground": white,
+    "list.activeSelectionIconForeground": white,
+    "list.dropBackground": white,
+    "list.hoverBackground": opacity(primary, 0.2),
 
     // Side Bar
-    "sideBar.background": "#292c3c",
+    "sideBar.background": mix(white, primary, 0.05),
 
     // Editor Groups & Tabs
-    "tab.unfocusedActiveBackground": "#333333",
+    "tab.unfocusedActiveBackground": opacity(info, 0.2),
 
     // Edittor Colors
-    "editor.background": "#303446",
+    "editor.background": white,
 
     ...extensions(context),
   };

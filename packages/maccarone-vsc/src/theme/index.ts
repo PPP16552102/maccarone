@@ -7,6 +7,7 @@ import {
 import { flavors } from "tavolozza";
 import { getUIColors } from "./uiColors";
 import { getTokenColors } from "./tokenColors";
+import { getSemanticTokens } from "./semanticTokens";
 
 export const defaultOptions: any = {
   accent: "mauve",
@@ -60,6 +61,8 @@ export const compileTheme = (
     name: `Maccarone ${flavorData.name}`,
     type: "light",
     colors: getUIColors(context),
+    semanticHighlighting: true,
+    semanticTokenColors: getSemanticTokens(context),
     tokenColors: getTokenColors(context),
   };
 };
